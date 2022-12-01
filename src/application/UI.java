@@ -1,6 +1,10 @@
 package application;
 
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 import chess.ChessPiece;
+import chess.ChessPosition;
 import chess.Color;
 
 public class UI {
@@ -24,6 +28,20 @@ public class UI {
 	public static final String ANSI_PURPLE_BACKGROUND = "\u001B[45m";
 	public static final String ANSI_CYAN_BACKGROUND = "\u001B[46m";
 	public static final String ANSI_WHITE_BACKGROUND = "\u001B[47m";
+
+	public static ChessPosition readChessposition(Scanner sc) {
+		try {
+			String chosenPosition = sc.nextLine();
+			char column = chosenPosition.charAt(0);
+			Integer row = Integer.parseInt(chosenPosition.substring(1));
+			return new ChessPosition(column, row);
+		}
+		catch (RuntimeException e) {
+			throw new InputMismatchException("Error reading chess."
+					+ " Valid values are from a1 to h8.");
+		}
+
+	}
 
 	public static void printBoard(ChessPiece[][] chessPieces) {
 		for (int i = 0; i < chessPieces.length; i++) {
