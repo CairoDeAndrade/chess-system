@@ -8,4 +8,6 @@ Neste trabalho pude reforçar e aprender diversos conceitos na POO, como: constr
 
 <p align="center">
   <img src="https://github.com/CairoDeAndrade/chess-system/blob/main/assets/images/chess-system.png" width="300" title="represetative image">
+  <br><br>
+  <img src="https://github.com/CairoDeAndrade/chess-system/blob/main/assets/images/chess-bishop-play.png" width="300" title="represetative bishop play">
 </p>
